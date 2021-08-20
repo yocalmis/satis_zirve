@@ -1,0 +1,23 @@
+iyizico.com
+dev.iyzipay.com
+https://sandbox-merchant.iyzipay.com/transactions
+https://medium.com/kartliodemeler/iyzico-odeme-formu-entegrasyonu-597477e0f2c1
+
+
+        $options = new \Iyzipay\Options();
+       $options->setApiKey("sandbox-Ob4o46YkMlAqenETM75mlZx5EAH0lky9");
+      $options->setSecretKey("sandbox-IGJY0Tdh1HhLDAd4VstfsmNjNVqWxSmE");
+       $options->setBaseUrl("https://sandbox-api.iyzipay.com");
+
+     //    $options->setApiKey("YJS6WaJxQKOGVpoMZryTk68KmNWmhSeS");
+      //    $options->setSecretKey("rU1jUL8qr7oAiTZQrGzKdfsESkeYzzd7");
+      //   $options->setBaseUrl("https://api.iyzipay.com");
+
+
+
+
+
+
+
+
+

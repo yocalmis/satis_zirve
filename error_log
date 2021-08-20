@@ -1,0 +1,8 @@
+[19-Apr-2021 20:46:16 UTC] PHP Fatal error:  Call to undefined function mb_convert_encoding() in /home/zirvedestek/public_html/ticari/application/libraries/Grocery_CRUD.php on line 1763
+[19-Apr-2021 20:46:17 UTC] PHP Fatal error:  Call to undefined function mb_convert_encoding() in /home/zirvedestek/public_html/ticari/application/libraries/Grocery_CRUD.php on line 1763
+[09-May-2021 13:22:15 UTC] PHP Fatal error:  Call to undefined function mb_convert_encoding() in /home/zirvedestek/public_html/ticari/application/libraries/Grocery_CRUD.php on line 1763
+[09-May-2021 13:22:16 UTC] PHP Fatal error:  Call to undefined function mb_convert_encoding() in /home/zirvedestek/public_html/ticari/application/libraries/Grocery_CRUD.php on line 1763
+[13-May-2021 03:43:59 UTC] PHP Fatal error:  Call to undefined function mb_convert_encoding() in /home/zirvedestek/public_html/ticari/application/libraries/Grocery_CRUD.php on line 1763
+[13-May-2021 03:44:00 UTC] PHP Fatal error:  Call to undefined function mb_convert_encoding() in /home/zirvedestek/public_html/ticari/application/libraries/Grocery_CRUD.php on line 1763
+[13-May-2021 03:46:21 UTC] PHP Fatal error:  Call to undefined function mb_convert_encoding() in /home/zirvedestek/public_html/ticari/application/libraries/Grocery_CRUD.php on line 1763
+[13-May-2021 03:46:21 UTC] PHP Fatal error:  Call to undefined function mb_convert_encoding() in /home/zirvedestek/public_html/ticari/application/libraries/Grocery_CRUD.php on line 1763

@@ -1,0 +1,27 @@
+iyzico’ nun test ortamında gerçekleştirdiğimiz, ekran görüntüleri ve örnek kodlar ile detaylı olarak anlattığımız iyzico entegrasyonu için bu bağlantıyı incelemenizi kesinlikle tavsiye ederiz.
+Entegrasyona Başlamak
+Entegrasyona başlarken sandbox ortamda bir hesap oluşturmamız gerekiyor. https://sandbox-merchant.iyzipay.com/auth/register adresi üzerinden entegrasyon sırasında kullanacağımız sandbox hesabımızı oluşturabiliriz.
+iyzico tarafından hazırlanmış olan PHP kütüphanesini https://github.com/iyzico/iyzipay-php bağlantısı üzerinden indirebilirsiniz.
+Kod Düzenlemeleri
+Entegrasyonun kod seviyesindeki ilk adımı olarak config.php içerisinde yer alan ApiKey ve SecretKey parametrelerini set ediyoruz.
+PHP clientı dönüş parametleri için get fonksiyonları içermekte. status, errorMessage ve checkoutFormContent parametreleri için aşağıdaki satırları initialize_checkout_form.php içerisine ekliyoruz.
+print_r($checkoutFormInitialize->getStatus()); 
+print_r($checkoutFormInitialize->getErrorMessage());
+print_r($checkoutFormInitialize->getCheckoutFormContent());
+bu satırları ekledikten sonra initialize_checkout_form.php yi çalıştırıyoruz. Formun tarayıcıda görüntülenebilmesi için aşağıdaki div satırlarını initialize_checkout_form.php’ ye ekliyoruz.
+<html>
+<body>
+<div id="iyzipay-checkout-form" class="popup"></div>
+</body>
+</html>
+Ödeme yapıldıktan sonra callbackUrl parametresine bir token değeri dönüyor. retrieve_checkout_form_result.php ödeme sonucunu alabilmemiz için bir örnek içeriyor. Çalıştırdığımızda tarayıcıda görünen retrieve_checkout_form_result.php dosyasının adresini initialize_checkout_form.php içerisinde callbackUrl olarak set ediyoruz.
+Ödeme sonrası callbackUrl adresimize gelen token değerini “token” parametresine giriyoruz. Bunun için retrieve_checkout_form_result.php içerisine aşağıdaki kod parçasını yazıyoruz.
+$token = $_POST["token"];
+$request->setToken($token); //bu parametre 11. satırda mevcut, sadece editliyoruz, yeniden eklemiyoruz.
+token ile yapılan sorgunun sonucunu “status” parametresi dönmekte. Ödeme işleminin sonucunu ise “paymentStatus” paremetresi dönmekte. paymentStatus = success ise tutar karttan çekilmiş, ödeme başarıyla yapılmış demektir.
+Son aşamada ise initialize_checkout_form.php’ yi Web Application olarak çalıştırıyoruz. Açılan ödeme formunda https://dev.iyzipay.com/tr/test-kartlari adresinde bulunan kart bilgilerini kullanabiliriz. Test kartlarında son kullanma tarihi için girilecek değer ay/yıl şeklinde olacak, örneğin 10/20 şeklinde giriş yapabiliriz. Cvv için girilecek değeri ise 123 olarak kullanabilirsiniz. 3D ödemelerde ise 3D Secure şifresini 283126 olarak kullanabiliriz. Ödeme butonuna bastığımzıda iyzico servislerini tetikliyoruz, sandbox ortamda bir ödeme işlemi gerçekleşiyor. Açılan pencerede status = success ve paymentStatus = Success görüyoruz, bu iki ifade ilgili tutarın karttan başarıyla çekildiğini gösteriyor.
+
+
+
+
+https://dev.iyzipay.com/tr/test-kartlari

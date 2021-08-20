@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.730293dd.chunk.css",
+    "main.js": "/static/js/main.7d183dab.chunk.js",
+    "main.js.map": "/static/js/main.7d183dab.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.18ed11d0.chunk.css": "/static/css/2.18ed11d0.chunk.css",
+    "static/js/2.2a33b68b.chunk.js": "/static/js/2.2a33b68b.chunk.js",
+    "static/js/2.2a33b68b.chunk.js.map": "/static/js/2.2a33b68b.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.084278e161708dc9b0e33856b8c0b3ca.js": "/precache-manifest.084278e161708dc9b0e33856b8c0b3ca.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.18ed11d0.chunk.css.map": "/static/css/2.18ed11d0.chunk.css.map",
+    "static/css/main.730293dd.chunk.css.map": "/static/css/main.730293dd.chunk.css.map",
+    "static/media/App.css": "/static/media/roboto-v19-latin-regular.8681f434.svg",
+    "static/media/outline-brightness_day.svg": "/static/media/outline-brightness_day.818c5d9b.svg",
+    "static/media/outline-brightness_night.svg": "/static/media/outline-brightness_night.9ea4dde6.svg"
+  }
+}
