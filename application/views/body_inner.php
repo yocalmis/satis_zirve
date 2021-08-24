@@ -10,13 +10,14 @@
 
 </div>
 -->
+
 <script>
 	window.self = {
 		base_url: '<?php echo base_url(); ?>',
 	}
 	var self = window.self;
 </script>
-
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/ahmet.css">
 <div class="side-nav">
 	<div class="s-n_h">
 		<div class="s-n_h_t">
@@ -28,9 +29,6 @@
 		<li>
 			<h2>
 				<center><?php echo substr($this->session->userdata('bina_adi'), 0, 18); ?>
-				
-				
-
 				
 				
 				</center>
@@ -385,30 +383,16 @@ echo base_url() . "zdrive/index/" . $this->session->userdata('id') . "/" . $em[0
 
 	</ul>
 </div>
+
 <div class="side-header">		
-
-<div style="margin-left:30px;"><b>Kullanıcı:<?php echo $online = $this->session->userdata('adminonline'); ?><br>
-Çalışılan Firma: <?php echo $this->session->userdata('bina_adi'); ?><br>
-
-</b>
-</div>
-<div style="margin-left:30px;"><b>
+<img class="logo1" src="<?php echo base_url(); ?>assets/logo.png" alt="Zirve Kayseri"> 
+<div class="button1"><b>
 <?php if(($this->session->userdata('uye_turu')==0)or($this->session->userdata('uye_turu')==1)){ echo $this->session->userdata('satis'); } ?>
-</b>
-</div>
-
-
-<!--	<input type="button" value="DRİVE" onclick="window.location.href = '';"/>
-	<input type="button" style="margin-left:1px;" value="MESAJ" onclick="window.location.href = '';"/>
-	<input type="button" value="ETKİNLİK" onclick="window.location.href = '';"/>
--->
-<a class="o_s-n waves-effect waves-light"><span class="icon" data-svg="outline-menu-24px"></span></a>
-
-
+</b></div>
 
 <div class="s-h_r">
 	<div class="user-menu">
-		<a class="user-menu__trigger waves-effect waves-light">
+		<a class="user-menu__trigger waves-effect waves-light profil1">
 		Profil
 		</a>
 		<div class="user-menu__inner">
