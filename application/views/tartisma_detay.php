@@ -1,3 +1,4 @@
+
 <?php error_reporting(0);if (!defined('BASEPATH')) {
     exit('No direct script access allowed');
 }
@@ -6,12 +7,22 @@
 <link rel="stylesheet" href="<?php echo base_url('assets/grocery_crud/css/ui/simple') ?>/jquery-ui-1.10.1.custom.min.css">
 <link rel="stylesheet" href="<?php echo site_url('assets') ?>/grocery_crud/texteditor/medium-editor/medium-editor.min.css">
 <link rel="stylesheet" href="<?php echo site_url('assets') ?>/grocery_crud/texteditor/medium-editor/themes/default.css">
-
+<link rel="stylesheet" href="<?php echo site_url('assets') ?>edit.css">
 <div class="material-container">
-
 	<div class="chats">
+
+
+
+
+<div class="tartismadtykonubslt">
+	<div class="trtbaslik"><p class="z-depth-5"><?php echo $konu; ?></p></div>
+	<div class="myButton">
+	<b>Tarih: </b><?php echo $tarih; ?>
+	<b>Başlatan:</b><?php echo $kim; ?>
+</div>
+</div>
+
 		<div class="chatsTopBar">
-			<h2 class="chatsTopBar__title">Mesaj Gönder</h2>
 			<button class="chats-send-new waves-effect waves-ripple">
 				<span class="icon" data-svg="add_circle_outline-24px"></span>
 				Yeni Mesaj
@@ -50,7 +61,7 @@ echo'<input type="hidden" name="ilk" value="0">';
 				</a>
 			</div>
 			<div class="sendMessageForm__inner">
-				<textarea id="ice" name="ice" class="texteditor waves-effect waves-light" data-placeholder="Bir şeyler yazın"></textarea>
+				<textarea minlength="5" id="ice" name="ice" class="texteditor" data-placeholder="Bir şeyler yazın"></textarea>
 			</div>
 
 			<button type="submit" name="action" class="chats-send waves-effect waves-ripple waves-light">Gönder <span class="icon" data-svg="send-24px"></span></button>
@@ -64,16 +75,6 @@ echo'<input type="hidden" name="ilk" value="0">';
 
 	</div>
 
-
- <br> <br> <br>
-
-	<b><font color="red">Tarih:</font> <?php echo $tarih; ?> 
-	<font  color="red">Başlatan:</font>  <?php echo $kim; ?></b>
-    <h1><font color="red"> <?php echo $konu; ?> </font></h1><br>
-
-
-</div>
-
 <!--
 <div class="material-container mt1 dFlex fdc chat-rows">
 
@@ -83,16 +84,24 @@ echo'<input type="hidden" name="ilk" value="0">';
 	</script>
 </div>
 -->
+
+
+
+
+	</div>
 <br><br>
 <?php $n = 0;if ($tartisma_msj_getir): foreach ($tartisma_msj_getir as $dizi): ?>
 <hr>
-<div style="width:100%">
-	<font color="red">Tarih:</font> <?php echo $dizi['tarih']; ?>
-	<font color="red">Gönderici:</font> <?php echo $gonderici[$n]; ?><br>
-	<font color="red">Mesaj:</font> <?php echo $dizi['mesaj']; ?>
+
+
+<span class="bbp-title-icon forum-icon color-primary h4"><i class="large material-icons">chat</i></span>
+	<font class="mesaj">Mesaj:</font><br>
+	<div class="mesajdevam"><font class="mesaj2"> <?php echo $dizi['mesaj']; ?></font><br></div>
+	<font class="tarih"> Tarih:</font><font class="tarihyaz"><?php echo $dizi['tarih']; ?></font>
+	<font class="gonderici">Gönderici:</font><font class="gonderici2"> <?php echo $gonderici[$n]; ?><br></font>
 	
-</div>
-	<br><br>
+
+	<br>
 	<?php $n = $n + 1;endforeach;endif;?>
 
 
@@ -117,3 +126,4 @@ echo'<input type="hidden" name="ilk" value="0">';
 </script>
 <?php $this->load->view('footer_ozel.php');?>
 <script src="<?php echo base_url('assets/grocery_crud/js/jquery_plugins/') ?>jquery.form.min.js"></script>
+<center>

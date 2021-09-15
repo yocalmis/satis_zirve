@@ -5,6 +5,7 @@ if (!defined('BASEPATH')) {
 ?>
 <link rel="stylesheet" href="<?php echo site_url('assets') ?>/grocery_crud/texteditor/medium-editor/medium-editor.min.css">
 <link rel="stylesheet" href="<?php echo site_url('assets') ?>/grocery_crud/texteditor/medium-editor/themes/default.css">
+<link rel="stylesheet" href="<?php echo site_url('assets') ?>edit.css">
 <?php $this->load->view('header.php');?>
 
 <div class="material-container m-0 chat-inner">

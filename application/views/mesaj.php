@@ -6,6 +6,7 @@
 <?php $this->load->view('header.php');?>
 <link rel="stylesheet" href="<?php echo site_url('assets') ?>/grocery_crud/texteditor/medium-editor/medium-editor.min.css">
 <link rel="stylesheet" href="<?php echo site_url('assets') ?>/grocery_crud/texteditor/medium-editor/themes/default.css">
+<link rel="stylesheet" href="<?php echo site_url('assets') ?>edit.css">
 <div class="material-container">
 	<div class="chats">
 		<div class="chatsTopBar">
@@ -45,17 +46,19 @@
 	</div>
 
 </div>
+
 <div class="material-container mt1 dFlex fdc chat-rows">
 	<?php 
-
 		$say = count($ar); $don = $say -1;
 	for($i=0; $i<=$don; $i++)
 	{ 
-    echo "<a style='text-decoration: none;' href='".base_url()."yonetim/mesajdetay/".$ar[$i]."'>".$name[$i]." - ".$okunmamis[$i]." okunmamış mesaj</a><br><br>";
+if($okunmamis[$i]==0){$renk="green";} else{$renk="red";}
+
+
+    echo"<div class='tartismakutu'><a  style='color:".$renk."' href='".base_url()."yonetim/mesajdetay/".$ar[$i]."'>".$name[$i]." - ".$okunmamis[$i]." okunmamış mesaj</a><br><br></div>";
 
 	}
 	
-
 
 	
 	
